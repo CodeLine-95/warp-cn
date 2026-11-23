@@ -1,0 +1,6 @@
+# Dependabot is intentionally disabled in this fork.
+# The upstream warpdotdev/warp config targets a private cargo registry and
+# pings the warpdotdev/tech-leads team for review, neither of which exists
+# here. Re-enable by restoring the upstream version if you ever need it.
+version: 2
+updates: []

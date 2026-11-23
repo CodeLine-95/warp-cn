@@ -1,0 +1,9 @@
+*.pdb -filter -diff -merge -text
+crates/input_classifier/models/** -filter -diff -merge -text
+crates/input_classifier/models/**/*tokenizer.json -filter -diff -merge text linguist-generated=true
+
+# i18n-aware merger auto-resolves pure `use ...;` block conflicts in Rust;
+# everything else falls through to the default 3-way merge.
+# Driver setup: ./script/install-merge-driver
+app/src/**/*.rs        merge=i18n-aware
+crates/**/src/**/*.rs  merge=i18n-aware
